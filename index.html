@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="js/need/layer.css"/>
+    <link rel="stylesheet" type="text/css" href="css/web.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+
+</head>
+<body>
+	<input type="hidden" id="j-openId" value="1234">
+	<img src="images/1.png" id="shan-img" style="display:none;" />
+    <img src="images/2.png" id="sorry-img" style="display:none;" />
+	<div class="top-banner">
+		<img src="images/top_banner.png" class="top-banner-con"/>
+	</div>
+	<!--话费购下载链接，具体链接地址需要问下开发-->
+	<div class="hfgo-download">
+		<a href="https://itunes.apple.com/cn/app/hua-fei-gou/id1040436118?mt=8" class="hfgo-download-href">下载话费购APP，就有5元话费送啦！</a>
+	</div>
+	<div class="reward">
+		<a href="javascript:;" class="reward-rule" id="j-reward-rule">活动规则</a>
+		<!--以下为转轮部分，用的现成的插件，我就没进行修改，只改动了位置，具体内容未做修改-->
+		<div class="reward-con">
+			<div class="banner">
+				<div class="turnplate" style="background-image:url(images/turnplate-bg.png);background-size:100% 100%;">
+					<canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+					<img class="pointer" src="images/turnplate-pointer.png"/>
+				</div>
+	        </div>
+		</div>
+		<!--转轮部分结束-->
+	</div>
+
+
+	<!-- 弹层提示开始 -->
+	<!--整个弹窗居于屏幕垂直居中，开发的时候自行计算-->
+		<!-- 未中奖提示 -->
+		<div class="pop-box-noselect award-box-layer" id="j-noaward-box-layer">
+		  <ul>
+		 		<li class="pop-box-close"><a class="j-close-btn" href="javascript:;"><img src="images/close_button.png"/></a></li>
+		 		<li class="pop-box-img"><img src="images/noselect.png"/></li>
+		 		<li class="pop-box-word">很遗憾，您没有中奖，请再接再厉！</li>
+		 		<li class="pop-box-button"><a class="j-close-btn" href="javascript:;">再来一次</a></li>
+		 	</ul>
+		</div>
+		<!-- 获奖提示层 -->
+		<div class="pop-box-select noaward-box-layer" id="j-award-box-layer">
+		 	<ul>
+		 		<li class="pop-box-close"><a class="j-close-btn" href="javascript:;"><img src="images/close_button.png"/></a></li>
+		 		<li class="pop-box-img"><img src="images/select.png"/></li>
+		 		<li class="pop-box-word">恭喜您，抽中了<i class="award-content j-award-content"></i>！</li>
+		 		<li class="pop-box-button"><a class="receive-award-btn j-receive-award-btn" href="javascript:;">领取奖品</a></li>
+		 	</ul>
+		</div>
+		<!-- 领奖信息填写 -->
+		<div class="receive-box receive-award-layer" id="j-receive-award-layer">
+			<ul>
+				<li class="receive-box-title">领取奖品</li>
+				<li class="receive-box-warning" id="j-warning-text"></li>
+				<li class="receive-box-input"><input class="j-phone-num" type="text" placeholder="请输入手机号"/></li>
+				<li class="receive-box-button"><a class="receive-btn j-receive-btn" href="javascript:;">领取</a></li>
+				<li class="receive-box-cut"><img src="images/receive_cut.png"/></li>
+				<li class="receive-box-word">领奖说明：<br />请使用联通手机号请使用联通手机号请使用联通手机号请使用联通手
+					机号请使用联通手机号请使用联通手机号请使用联通手机号请使用联通手机号</li>
+			</ul>
+		</div>
+		<!-- 领奖成功提示 -->
+		<div class="pop-box-select success-box-layer" id="j-success-box-layer">
+		 	<ul>
+		 		<li class="pop-box-close"><a class="j-close-btn" href="javascript:;"><img src="images/close_button.png"/></a></li>
+		 		<li class="pop-box-img"><img src="images/select.png"/></li>
+		 		<li class="pop-box-word">恭喜您，你已经成功领取<i class="award-content j-success-award-content"></i>！</li>
+		 		<li class="pop-box-button"><a class="j-close-btn" href="javascript:;">再玩一次</a></li>
+		 	</ul>
+		</div>
+		<!-- 规则提示层 -->
+		<div class="rule-box rule-box-layer" id="j-rule-box-layer">
+			<ul>
+				<li><a class="j-close-btn" href="javascript:;"><img src="images/close_button.png" class="rule-close"/></a></li>
+				<li><img src="images/rule_img.png" class="rule-img"/></li>
+			</ul>
+			<p class="rule-title">活动规则</p>
+			<p class="rule-con">1.沙龙的会计法律上即可对方拉斯加对方了加上了对方就沙龙的减肥垃圾地方刘三姐法</p>
+		    <p class="rule-con">2.沙龙的会计法律上即可对方拉斯加对方了加上了对方就沙龙的减肥垃圾地方刘三姐法</p>
+		    <p class="rule-con">3.沙龙的会计法律上即可对方拉斯加对方了加上了对方就沙龙的减肥垃圾地方刘三姐法</p>
+		    <p class="rule-con">4.沙龙的会计法律上即可对方拉斯加对方了加上了对方就沙龙的减肥垃圾地方刘三姐法</p>
+		</div>
+		<!-- 分享提示层 -->
+		<div class="share-box share-box-layer" id="j-share-box-layer">
+		<a class="wrap-layer j-share-close" href="javascript:;">
+			<img src="images/share.png"/>
+		</a>
+		</div>
+		<!-- 遮罩层 -->
+		<div class="dialog-backdrap" id="j-dialog-backdrap"></div>
+<!-- 弹层提示结束 -->
+
+
+	<div class="bottombox">
+		<!--奖品实时更新，给的原型需要实时滚动，具体表现方式参照原型图-->
+		<div class="reward-result">
+			<img src="images/reward_result_title.png"/>
+			<ul class="reward-list">
+				<li class="result-listbox">
+					<span class="result-list-num">恭喜186****5987</span>
+					<span class="result-list-name">抽中了100元话费</span>
+				</li>
+				<li class="result-listbox">
+					<span class="result-list-num">恭喜186****5987</span>
+					<span class="result-list-name">抽中了100元话费</span>
+				</li>
+				<li class="result-listbox">
+					<span class="result-list-num">恭喜186****5987</span>
+					<span class="result-list-name">抽中了100元话费</span>
+				</li>
+				<li class="result-listbox">
+					<span class="result-list-num">恭喜186****5987</span>
+					<span class="result-list-name">抽中了100元话费</span>
+				</li>
+				<li class="result-listbox">
+					<span class="result-list-num">恭喜186****5987</span>
+					<span class="result-list-name">抽中了100元话费</span>
+				</li>
+				<li class="result-listbox">
+					<span class="result-list-num">恭喜186****5987</span>
+					<span class="result-list-name">抽中了100元话费</span>
+				</li>
+				<li class="result-listbox">
+					<span class="result-list-num">恭喜186****5987</span>
+					<span class="result-list-name">抽中了100元话费</span>
+				</li>
+				<li class="result-listbox">
+					<span class="result-list-num">恭喜186****5987</span>
+					<span class="result-list-name">抽中了100元话费</span>
+				</li>
+				<li class="result-listbox">
+					<span class="result-list-num">恭喜186****5987</span>
+					<span class="result-list-name">抽中了100元话费</span>
+				</li>
+			</ul>
+			<img src="images/reward_result_bottom.png"/>
+		</div>
+	</div>
+	<div class="warning">
+		活动最终解释权归话费购所有
+	</div>
+  <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="js/layer.m.js"></script>
+	<script type="text/javascript" src="js/awardRotate.js"></script>
+	<script type="text/javascript" src="js/turntable.js"></script>
+	<!-- <script type="text/javascript" src="js/index.js"></script> -->
+</body>
+</html>

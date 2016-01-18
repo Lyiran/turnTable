@@ -1,0 +1,281 @@
+html {
+	-webkit-text-size-adjust: none;
+	font-size: 16px;
+}
+body {
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	background: #f5524b;
+}
+a {text-decoration: none;}
+ul,li {list-style: none;
+overflow: hidden;}
+ul, menu, dir {
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-padding-start: 0px;
+}
+@media only screen and (min-width: 320px)  and (max-width: 374px) {
+	html {
+		font-size: 14px
+	}
+}
+@media only screen and (min-width: 375px)  and (max-width: 374px){
+	html {
+		font-size: 14px
+	}
+}
+@media only screen and (min-width: 414px)  and (max-width: 600px){
+	html {
+		font-size: 16px
+	}
+}
+/*以下为抽奖页面样式*/
+.top-banner-con{
+	width: 100%;
+	display: block;
+}
+.hfgo-download {
+	text-align: center;
+	margin: 1em auto;
+}
+.hfgo-download-href {
+	padding: .5em 1em;
+	border-radius: 1.5em;
+	background: #34394f;
+	color: #ffffff;
+	font-size: 1.2em;
+}
+.hfgo-download-href:hover {
+	color: #FFFFFF;
+}
+.hfgo-download-href:active {
+	color: #FFFFFF;
+}
+.reward {
+	text-align: center;
+}
+.reward-rule {
+	color: #fff621;
+	font-size: 1.2em;
+}
+.reward-rule:hover {
+	color: #FFF621;
+}
+.reward-rule:active {
+	color: #FFF621;
+}
+.reward-con {
+	margin-top: .5em;
+}
+.bottombox {
+	width: 100%;
+}
+.reward-result {
+	width: 90%;
+	background: #c44a44;
+	margin:0 5%;
+}
+.reward-result img{
+	width: 90%;
+	margin: 0.5em 5%;
+}
+.reward-list {
+	width: 80%;
+	margin: 0 10%;
+	font-size: 1em;
+	color: #FFFFFF;
+	height: 10em;
+	overflow-y: auto;
+}
+.reward-list li{
+	line-height: 2em;
+}
+.result-listbox {
+	overflow: hidden;
+}
+.result-list-num {
+	float: left;
+}
+.result-list-name {
+	float: right;
+}
+.warning {
+	color: #FFFFFF;
+	text-align: center;
+	font-size: .7em;
+	padding: 1em 0;
+}
+
+/*以下为弹窗部分样式*/
+.pop-box-noselect,.pop-box-select{
+	width: 80%;
+	height: 20em;
+	background: #FFFFFF;
+	border-radius: 5px;
+	text-align: center;
+/* 	margin: 1em 10%; */
+}
+.pop-box-close img{
+	float: right;
+	width: 1em;
+	margin: 1.5em 1.5em 0 0;
+}
+.pop-box-img {
+	margin: 1em auto 2.5em;
+}
+.pop-box-img img {
+	width: 4em;
+}
+.pop-box-word {
+	color: #ffbe04;
+}
+.pop-box-button {
+	margin: 1.5em auto;
+}
+.pop-box-button a {
+	width: 60%;
+	height: 2.5em;
+	line-height: 2.5em;
+	background: #f5524b;
+	display: block;
+	margin: 0 20%;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+
+/*以下为领奖弹窗样式*/
+.receive-box {
+	width: 80%;
+	height: 27em;
+	background: #FFFFFF;
+	border-radius: 5px;
+	text-align: center;
+/* 	margin: 1em 10%; */
+}
+.receive-box-title {
+	height: 2.5em;
+	line-height: 2.5em;
+	background: #FFBE04;
+	color: #FFFFFF;
+	border-top-right-radius:5px ;
+	border-top-left-radius: 5px ;
+}
+.receive-box-warning {
+	height: 2.5em;
+	line-height:3.5em;
+	font-size: .8em;
+	color: red;
+	display: block;
+}
+.receive-box-input input {
+	width: 60%;
+}
+.receive-box-button {
+	margin: 1em auto .5em;
+}
+.receive-box-button a {
+	width: 60%;
+	height: 2.5em;
+	line-height: 2.5em;
+	background: #f5524b;
+	display: block;
+	margin: 0 20%;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+.receive-box-cut img{
+	width: 100%;
+}
+.receive-box-word {
+	text-align: left;
+	color: #999;
+	font-size: 0.9em;
+	width: 80%;
+	margin: 0.5em 10% 1em;
+}
+
+/*以下为分享页面*/
+.share-box img {width: 100%;}
+
+/*以下为活动规则页面*/
+.rule-box {
+	width: 80%;
+	height: 29em;
+	background: #FFFFFF;
+	padding:1em;
+	border-radius: 5px;
+	text-align: center;
+/* 	margin: 1em 10%; */
+	border: .5em solid #ffbe04;
+}
+.rule-close {
+	float: right;
+	width: 1em;
+	margin: .5em .5em 0 0;
+	overflow: hidden;
+}
+.rule-img {
+	width: 4em;
+	display: block;
+	margin: 1em auto;
+}
+.rule-title {
+	font-size: 1.8em;
+	color: #FFBE04;
+	margin: 0.2em auto 0.6em;
+}
+.rule-con {
+	text-align: left;
+	line-height: 1.8em;
+	font-size: 1em;
+	margin-bottom: 0;
+}
+
+/* 蒙层样式 */
+.dialog-backdrap {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+}
+/* 中奖显示层 */
+.award-box-layer , .noaward-box-layer,
+.receive-award-layer, .rule-box-layer,
+.success-box-layer {
+	display: none;
+	position: fixed;
+	z-index: 1001;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+.share-box-layer {
+	display: none;
+	position: fixed;
+	z-index: 1001;
+	top: 0;
+	right: 0;
+}
+.wrap-layer {
+	display: block;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+/* 	background-color: #fff; */
+}
+.award-content {
+	font-weight: normal;
+	font-style: normal;
+}
+
